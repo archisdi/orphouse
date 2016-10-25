@@ -1,0 +1,222 @@
+@charset "utf-8";
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/* A more considered reset; more of a restart... As per: csswizardry.com/2011/10/reset-restarted */
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+html {
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.avatar {
+    float: left;
+    margin: 0 40px 20px 0;
+}
+    .avatar img {
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 125px;
+    }
+
+.content {
+    float: left;
+    width: 300px;
+}
+    .title {
+        font-size: 48px;
+        font-weight: normal;
+        line-height: 1;
+    }
+
+    .social-icons li {
+        display: inline;
+    }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            text-indent: -9999px;
+        }
+
+
+
+
+
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+p,
+ul, ol, dl,
+.title {
+    margin-bottom: 20px;
+}
+p {
+    font-weight: bold;
+}
+ul, ol, dl {
+    list-style-type: none;
+}
+a {
+    color: #339999;
+    font-weight: bold;
+}
+a:hover, a:focus {
+    color: #95a4a9;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $MISC
+\*------------------------------------*/
+a img:hover,
+.social-icons a:hover {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    filter: alpha(opacity=85);
+    opacity: 0.85;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+
+/*
+Animate.css - http://daneden.me/animate
+LICENSED UNDER THE  MIT LICENSE (MIT)
+
+Copyright (c) 2012 Dan Eden
+*/
+.animated {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes bounceInDown {
+    0% {
+        -webkit-transform: translateY(-2000px);
+    }
+    
+    60% {
+        -webkit-transform: translateY(30px);
+    }
+    
+    80% {
+        -webkit-transform: translateY(-10px);
+    }
+    
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes bounceInDown {
+    0% {
+        -moz-transform: translateY(-2000px);
+    }
+    
+    60% {
+        -moz-transform: translateY(30px);
+    }
+    
+    80% {
+        -moz-transform: translateY(-10px);
+    }
+    
+    100% {
+        -moz-transform: translateY(0);
+    }
+}
+
+@-o-keyframes bounceInDown {
+    0% {
+        -o-transform: translateY(-2000px);
+    }
+    
+    60% {
+        -o-transform: translateY(30px);
+    }
+    
+    80% {
+        -o-transform: translateY(-10px);
+    }
+    
+    100% {
+        -o-transform: translateY(0);
+    }
+}
+
+@keyframes bounceInDown {
+    0% {
+        transform: translateY(-2000px);
+    }
+    
+    60% {
+        transform: translateY(30px);
+    }
+    
+    80% {
+        transform: translateY(-10px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    -moz-animation-name: bounceInDown;
+    -o-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $MOBILE
+\*------------------------------------*/
+@media handheld, only screen and (max-width: 720px) {
+    .avatar,
+    .content {
+        float: none;
+        
+    }
+
+    .avatar img {
+        max-width: 125px;
+        max-height: 125px;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
